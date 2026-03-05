@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <!ELEMENT cvs (candidate+)>
+
+        <!ELEMENT candidate (name, currentJobTitle, experiences, educationEntries, skills)>
+
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT currentJobTitle (#PCDATA)>
+
+        <!ELEMENT experiences (experience+)>
+        <!ELEMENT experience (jobTitle, company, period, location, description)>
+        <!ATTLIST experience id CDATA #REQUIRED>
+
+        <!ELEMENT jobTitle (#PCDATA)>
+        <!ELEMENT company (#PCDATA)>
+
+        <!ELEMENT period (start, end)>
+        <!ELEMENT start (#PCDATA)>
+        <!ELEMENT end (#PCDATA)>
+
+        <!ELEMENT location (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+
+        <!ELEMENT educationEntries (education+)>
+        <!ELEMENT education (title, school, location, period)>
+        <!ATTLIST education id CDATA #REQUIRED>
+
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT school (#PCDATA)>
+
+        <!ELEMENT skills (skill+)>
+        <!ELEMENT skill (#PCDATA)>

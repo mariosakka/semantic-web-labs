@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cvs SYSTEM "./cvs.dtd">
+
+<cvs>
+
+    <candidate>
+        <name>Mohamad-Mario Sakka</name>
+        <currentJobTitle>App Development Lead</currentJobTitle>
+
+        <experiences>
+            <experience id="exp1">
+                <jobTitle>Back-End Developer</jobTitle>
+                <company>Nischala Technologies BV</company>
+                <period>
+                    <start>2024-11</start>
+                    <end>2025-04</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Developed a web server for an oncology research project used by medical institutions.</description>
+            </experience>
+
+            <experience id="exp2">
+                <jobTitle>App Development Lead</jobTitle>
+                <company>Google Developer Group on Campus (GDG UNSTPB)</company>
+                <period>
+                    <start>2024-10</start>
+                    <end>Present</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Organized app development workshop; presented talks at workshops hosted by GDG UNSTPB.</description>
+            </experience>
+        </experiences>
+
+        <educationEntries>
+            <education id="edu1">
+                <title>Bachelor’s in Computers and Information Technology – Information Engineering in English</title>
+                <school>Polytechnic University of Bucharest (FILS)</school>
+                <location>Bucharest, Romania</location>
+                <period>
+                    <start>202?</start>
+                    <end>2026-06</end>
+                </period>
+            </education>
+
+            <education id="edu2">
+                <title>Baccalaureate</title>
+                <school>Jerusalem School Bucharest</school>
+                <location>Bucharest, Romania</location>
+                <period>
+                    <start>202?</start>
+                    <end>202?</end>
+                </period>
+            </education>
+        </educationEntries>
+
+        <skills>
+            <skill>C++</skill>
+            <skill>Java</skill>
+            <skill>JavaScript</skill>
+            <skill>Python</skill>
+            <skill>Kotlin</skill>
+            <skill>MySQL</skill>
+            <skill>MongoDB</skill>
+            <skill>Spring Boot</skill>
+            <skill>React</skill>
+            <skill>Docker</skill>
+            <skill>GitHub</skill>
+            <skill>Linux</skill>
+            <skill>Flutter</skill>
+            <skill>Romanian</skill>
+            <skill>English</skill>
+            <skill>Arabic</skill>
+        </skills>
+    </candidate>
+
+
+    <candidate>
+        <name>Mahmoud Mirghani Abdelrahman</name>
+        <currentJobTitle>Customer Success &amp; Renewals Intern</currentJobTitle>
+
+        <experiences>
+            <experience id="exp1">
+                <jobTitle>Customer Success &amp; Renewals Intern</jobTitle>
+                <company>Veeam Software</company>
+                <period>
+                    <start>2025-09</start>
+                    <end>2025-12</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Assisted with customer health checks, renewals, and license queries; supported renewal cases.</description>
+            </experience>
+
+            <experience id="exp2">
+                <jobTitle>Web Lead</jobTitle>
+                <company>Google Developer Group (GDG) UNSTPB</company>
+                <period>
+                    <start>2024-09</start>
+                    <end>2025-09</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Led web development projects and organized events; coordinated team activities.</description>
+            </experience>
+
+            <experience id="exp3">
+                <jobTitle>Full Stack Developer (Team Leader)</jobTitle>
+                <company>Nischala Technologies BV</company>
+                <period>
+                    <start>2024-11</start>
+                    <end>2025-05</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Developed a hospital doctors/patients app using Flutter and Express.js with Firebase.</description>
+            </experience>
+
+            <experience id="exp4">
+                <jobTitle>Freelance Full Stack Developer</jobTitle>
+                <company>Freelance</company>
+                <period>
+                    <start>2024-09</start>
+                    <end>Present</end>
+                </period>
+                <location>Bucharest, Romania</location>
+                <description>Delivered client web apps with admin CMS and file uploads (e.g., Lotus Gedo restaurant; Sudan Embassy).</description>
+            </experience>
+        </experiences>
+
+        <educationEntries>
+            <education id="edu1">
+                <title>Bachelor in Computers and Information Technology – Information Engineering in English</title>
+                <school>Polytechnic University of Bucharest (FILS)</school>
+                <location>Bucharest, Romania</location>
+                <period>
+                    <start>202?</start>
+                    <end>2026-06</end>
+                </period>
+            </education>
+        </educationEntries>
+
+        <skills>
+            <skill>Java</skill>
+            <skill>JavaScript</skill>
+            <skill>HTML</skill>
+            <skill>CSS</skill>
+            <skill>Node.js</skill>
+            <skill>Express.js</skill>
+            <skill>React.js</skill>
+            <skill>Django</skill>
+            <skill>Flutter</skill>
+            <skill>MySQL</skill>
+            <skill>MongoDB</skill>
+            <skill>Linux</skill>
+            <skill>Ubuntu</skill>
+            <skill>Romanian</skill>
+            <skill>English</skill>
+            <skill>Arabic</skill>
+        </skills>
+    </candidate>
+
+</cvs>
