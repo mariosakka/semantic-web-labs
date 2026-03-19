@@ -119,7 +119,7 @@ Every file defines `<xsl:template match="/">` as the entry point. The slash mean
 Iteration
 ---------
 
-`<xsl:for-each select="movies/movie">` loops over each `<movie>` element. Inside the loop you can place any XHTML structure and call `<xsl:value-of select="title"/>` to inject data. `ex3.xsl` adds `<xsl:sort select="title"/>` inside the loop to reorder the movies alphabetically before rendering them.
+`<xsl:for-each select="movies/movie">` loops over each `<movie>` element. Inside the loop you can place any XHTML structure and call `<xsl:value-of select="title"/>` to inject data. `ex3.xsl` adds `<xsl:sort select="title"/>` inside the loop to reorder the movies alphabetically and now renders only a simple `<ul>` of titles.
 
 Conditional logic
 -----------------

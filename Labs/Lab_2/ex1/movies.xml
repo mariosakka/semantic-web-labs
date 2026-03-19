@@ -76,4 +76,79 @@
         </schedules>
         <genre>action</genre>
     </movie>
+    <movie>
+        <title>The Dark Knight</title>
+        <director>Christopher Nolan</director>
+        <actors>
+            <actor>
+                <name>Christian Bale</name>
+            </actor>
+            <actor>
+                <name>Heath Ledger</name>
+            </actor>
+            <actor>
+                <name>Aaron Eckhart</name>
+            </actor>
+        </actors>
+        <year>2008</year>
+        <synopsis>Batman faces the Joker, who plunges Gotham into chaos and forces Bruce Wayne to confront his limits.</synopsis>
+        <halls>
+            <hall id="4">
+                <chairType>mesh fabric</chairType>
+                <capacity>150</capacity>
+            </hall>
+        </halls>
+        <schedules>
+            <schedule>
+                <date>2026-04-06</date>
+                <hours>20:00</hours>
+                <day>Monday</day>
+            </schedule>
+            <schedule>
+                <date>2026-04-07</date>
+                <hours>18:30</hours>
+                <day>Tuesday</day>
+            </schedule>
+        </schedules>
+        <genre>action</genre>
+    </movie>
+    <movie>
+        <title>Spider-Man 3</title>
+        <director>Sam Raimi</director>
+        <actors>
+            <actor>
+                <name>Tobey Maguire</name>
+            </actor>
+            <actor>
+                <name>Kirsten Dunst</name>
+            </actor>
+            <actor>
+                <name>James Franco</name>
+            </actor>
+        </actors>
+        <year>2007</year>
+        <halls>
+            <hall id="5">
+                <chairType>leather arm chair</chairType>
+                <capacity>140</capacity>
+            </hall>
+            <hall id="6">
+                <chairType>mesh fabric</chairType>
+                <capacity>110</capacity>
+            </hall>
+        </halls>
+        <schedules>
+            <schedule>
+                <date>2026-04-08</date>
+                <hours>17:00</hours>
+                <day>Wednesday</day>
+            </schedule>
+            <schedule>
+                <date>2026-04-09</date>
+                <hours>19:30</hours>
+                <day>Thursday</day>
+            </schedule>
+        </schedules>
+        <genre>action</genre>
+    </movie>
 </movies>
