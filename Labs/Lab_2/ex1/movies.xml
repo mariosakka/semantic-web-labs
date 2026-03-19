@@ -1,97 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex1.xsd">
     <movie>
-        <title>Galactic Odyssey</title>
-        <director>Ana Petrescu</director>
+        <title>Interstellar</title>
+        <director>Christopher Nolan</director>
         <actors>
             <actor>
-                <name>Ion Popescu</name>
+                <name>Matthew McConaughey</name>
             </actor>
             <actor>
-                <name>Mara Ionescu</name>
+                <name>Anne Hathaway</name>
+            </actor>
+            <actor>
+                <name>Jessica Chastain</name>
             </actor>
         </actors>
-        <year>2026</year>
-        <synopsis>An interstellar heist crew races against a corrupt consortium to recover a stolen terraforming engine.</synopsis>
+        <year>2014</year>
+        <synopsis>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</synopsis>
         <halls>
             <hall id="1">
                 <chairType>mesh fabric</chairType>
-                <capacity>120</capacity>
+                <capacity>140</capacity>
             </hall>
             <hall id="2">
                 <chairType>leather arm chair</chairType>
-                <capacity>80</capacity>
+                <capacity>95</capacity>
             </hall>
         </halls>
         <schedules>
             <schedule>
-                <date>2026-03-25</date>
-                <hours>19:00</hours>
-                <day>Wednesday</day>
+                <date>2026-04-02</date>
+                <hours>20:15</hours>
+                <day>Thursday</day>
             </schedule>
             <schedule>
-                <date>2026-03-26</date>
-                <hours>21:30</hours>
-                <day>Thursday</day>
+                <date>2026-04-04</date>
+                <hours>17:30</hours>
+                <day>Saturday</day>
             </schedule>
         </schedules>
         <genre>action</genre>
     </movie>
     <movie>
-        <title>Silent Horizon</title>
-        <director>Elena Popa</director>
+        <title>The Matrix</title>
+        <director>Lana Wachowski</director>
         <actors>
             <actor>
-                <name>Radu Munteanu</name>
+                <name>Keanu Reeves</name>
+            </actor>
+            <actor>
+                <name>Laurence Fishburne</name>
+            </actor>
+            <actor>
+                <name>Carrie-Anne Moss</name>
             </actor>
         </actors>
-        <year>2024</year>
+        <year>1999</year>
+        <synopsis>A hacker discovers the nature of reality and joins a rebellion against the machines controlling humanity.</synopsis>
         <halls>
             <hall id="3">
-                <chairType>mesh fabric</chairType>
-                <capacity>100</capacity>
+                <chairType>leather arm chair</chairType>
+                <capacity>130</capacity>
             </hall>
         </halls>
         <schedules>
             <schedule>
-                <date>2026-03-27</date>
-                <hours>18:45</hours>
+                <date>2026-04-03</date>
+                <hours>19:45</hours>
                 <day>Friday</day>
             </schedule>
-        </schedules>
-        <genre>drama</genre>
-    </movie>
-    <movie>
-        <title>Titanic</title>
-        <director>James Cameron</director>
-        <actors>
-            <actor>
-                <name>Leonardo DiCaprio</name>
-            </actor>
-            <actor>
-                <name>Kate Winslet</name>
-            </actor>
-        </actors>
-        <year>1997</year>
-        <synopsis>The tragic voyage of the RMS Titanic unfolds in a sweeping romance.</synopsis>
-        <halls>
-            <hall id="4">
-                <chairType>leather arm chair</chairType>
-                <capacity>150</capacity>
-            </hall>
-        </halls>
-        <schedules>
             <schedule>
-                <date>2026-03-28</date>
-                <hours>20:00</hours>
-                <day>Saturday</day>
-            </schedule>
-            <schedule>
-                <date>2026-03-29</date>
-                <hours>16:30</hours>
+                <date>2026-04-05</date>
+                <hours>16:00</hours>
                 <day>Sunday</day>
             </schedule>
         </schedules>
-        <genre>drama</genre>
+        <genre>action</genre>
     </movie>
 </movies>
