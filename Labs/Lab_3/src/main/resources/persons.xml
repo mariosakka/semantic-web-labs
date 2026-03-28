@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+    <person firstName="John" lastName="Smith" age="28" />
+    <person firstName="Henry" lastName="Hill" age="33" />
+    <person firstName="Peter" lastName="Miller" age="37" />
+    <person firstName="Alice" lastName="Brown" age="45" />
+</persons>
