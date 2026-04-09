@@ -1,0 +1,3 @@
+[submodule "Big-HWs/Big_HW_1"]
+	path = Big-HWs/Big_HW_1
+	url = git@github.com:mmswflow-upb/semantic-web-hw-1.git
