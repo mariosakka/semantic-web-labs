@@ -286,7 +286,7 @@ SELECT ?actorName ?roleName
 WHERE {
   <http://example.org/startrek/STTNG> ex:hasActors ?bag .
   ?bag ?p ?actor .
-  FILTER(strstarts(str(?p), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
+  FILTER(strstarts(str(?p), str(rdf:_)))
   ?actor ex:name       ?actorName .
   ?actor ex:playedRole ?role .
   ?role  ex:roleName   ?roleName .
@@ -359,14 +359,14 @@ Without a filter this would also bind `?actor` to `rdf:Bag` (the type triple), w
 **FILTER — keep only container membership predicates:**
 
 ```sparql
-FILTER(strstarts(str(?p), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
+FILTER(strstarts(str(?p), str(rdf:_)))
 ```
 
 `FILTER` removes bindings that do not satisfy the condition.
 
 - `str(?p)` — converts the URI value of `?p` to a plain string.
-- `strstarts(string, prefix)` — a SPARQL built-in that returns `true` when the string starts with the given prefix.
-- `"http://www.w3.org/1999/02/22-rdf-syntax-ns#_"` — the common prefix of all container membership properties (`rdf:_1`, `rdf:_2`, `rdf:_3`, …).
+- `str(rdf:_)` — `rdf:_` is a prefixed name that expands to `http://www.w3.org/1999/02/22-rdf-syntax-ns#_`. Wrapping it in `str()` converts that URI to the plain string `"http://www.w3.org/1999/02/22-rdf-syntax-ns#_"`. This avoids hardcoding the full namespace URI in the filter.
+- `strstarts(string, prefix)` — a SPARQL built-in that returns `true` when the first argument starts with the second. Here it matches any predicate whose URI begins with `rdf:_`, i.e. `rdf:_1`, `rdf:_2`, `rdf:_3`, …
 
 After this filter, `?p` can only be `rdf:_1`, `rdf:_2`, or `rdf:_3`, so `?actor` is bound only to the three actor resources — never to `rdf:Bag`.
 

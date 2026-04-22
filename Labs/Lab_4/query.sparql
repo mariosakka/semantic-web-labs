@@ -3,10 +3,10 @@ PREFIX ex:  <http://example.org/startrek/>
 
 SELECT ?actorName ?roleName
 WHERE {
-  <http://example.org/startrek/STTNG> ex:hasActors ?bag .
-  ?bag ?p ?actor .
-  FILTER(strstarts(str(?p), "http://www.w3.org/1999/02/22-rdf-syntax-ns#_"))
-  ?actor ex:name      ?actorName .
-  ?actor ex:playedRole ?role .
-  ?role  ex:roleName  ?roleName .
+    ex:STTNG ex:hasActors ?bag .
+    ?bag ?p ?actor .
+    FILTER(strstarts(str(?p),str(rdf:_))) .
+    ?actor ex:name ?actorName .
+    ?actor ex:playedRole ?role .
+    ?role ex:roleName ?roleName
 }
