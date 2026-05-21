@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns="http://example.org/espresso#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:Class rdf:about="http://example.org/espresso#Cafe">
+    <rdfs:label>Café</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:Ontology rdf:about="http://example.org/espresso#EspressoOntology">
+    <rdfs:comment>Espresso ontology for Semantic Web Lab 6, exercise/step 29.</rdfs:comment>
+    <rdfs:comment>Exercise 11 answer: transitive means if A hasIngredient B and B hasIngredient C, then A hasIngredient C.</rdfs:comment>
+    <rdfs:comment>Exercise 12 answer: functional means an individual can have at most one value for this property.</rdfs:comment>
+    <rdfs:comment>Exercise 14 answer: a restriction is a class expression that limits or describes property values for members of a class.</rdfs:comment>
+    <rdfs:comment>Exercise 19: ontology is ready to classify with a Description Logic reasoner.</rdfs:comment>
+    <rdfs:comment>Exercise 22: CafeMocha is converted to a defined class using equivalentClass.</rdfs:comment>
+    <rdfs:comment>Exercise 23 answer: after reasoning, classes that satisfy the definition of CafeMocha can be inferred as CafeMocha.</rdfs:comment>
+    <rdfs:comment>Exercise 25 answer: EspressoMachiato should be inferred as a subclass of SweetEspresso. hasSweetness is functional because each espresso should have one sweetness level.</rdfs:comment>
+    <rdfs:comment>Exercise 29: datatype-restriction classes allow individuals to be classified by hasCalories.</rdfs:comment>
+  </owl:Ontology>
+  <EspressoMachiato rdf:about="http://example.org/espresso#macchiato3">
+    <hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</hasCalories>
+  </EspressoMachiato>
+  <owl:Class rdf:about="http://example.org/espresso#SweetEspresso">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N5a364c27144f4ee4b94bace09b8e9e01">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#Espresso"/>
+          <owl:Restriction rdf:nodeID="Na26b2a6beae04691a65e726e084678b8">
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://example.org/espresso#hasSweetness">
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+                <rdfs:range rdf:resource="http://example.org/espresso#EspressoSweetness"/>
+              </owl:ObjectProperty>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="http://example.org/espresso#ExtraSweetness"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <EspressoMachiato rdf:about="http://example.org/espresso#macchiato2">
+    <hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</hasCalories>
+  </EspressoMachiato>
+  <owl:Class rdf:about="http://example.org/espresso#InterestingEspresso">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N7edecde3d7944998afea73dfd65e2b14">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#Espresso"/>
+          <owl:Restriction rdf:nodeID="N61f84507a2764ecc8c4fac294de546eb">
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="http://example.org/espresso#hasTopping">
+                <rdfs:subPropertyOf rdf:resource="http://example.org/espresso#hasIngredient"/>
+                <owl:inverseOf rdf:resource="http://example.org/espresso#isToppingOf"/>
+                <rdfs:domain rdf:resource="http://example.org/espresso#Espresso"/>
+                <rdfs:range rdf:resource="http://example.org/espresso#EspressoTopping"/>
+              </owl:ObjectProperty>
+            </owl:onProperty>
+            <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+            <owl:onClass rdf:resource="http://example.org/espresso#EspressoTopping"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoRoast">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#MediumCalorieEspresso">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="Na22691a1d5614ae8b646b6ddd67b68a1">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#Espresso"/>
+          <owl:Restriction rdf:nodeID="Nf6cd4dbcfcd648c0a7000ee4654ae632">
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org/espresso#hasCalories">
+                <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+              </owl:DatatypeProperty>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <rdfs:Datatype rdf:nodeID="N796d68701f0949d293ba6a6b9789da82">
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description rdf:nodeID="N9975dc5e3ef944fba7d8fcd89f8c7092">
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</xsd:minInclusive>
+                  </rdf:Description>
+                  <rdf:Description rdf:nodeID="Nc639f731d95540b288c93adb8b11ff2a">
+                    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199</xsd:maxInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#ProbeClass">
+    <rdfs:comment>Repaired: no longer a subclass of two disjoint topping classes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#CinnamonDolceLatte">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSpecialty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7701a3f6db63471c9d8df54910b94753">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasTopping"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/espresso#CinnamonTopping"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5dc75894587b423d889d51d561d470e1">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasTopping"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>Espresso with steamed milk and cinnamon dolce flavored syrup.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#CafeMocha">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSpecialty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N724679c9806949ca94905e50137c62b2">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasTopping"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="Nf018e20ccda341f4a97a509563a51d58">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#EspressoSpecialty"/>
+          <owl:Restriction rdf:nodeID="N958cdf45e10a4df5b3b71c92fabcd6a6">
+            <owl:onProperty rdf:resource="http://example.org/espresso#hasTopping"/>
+            <owl:someValuesFrom rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <EspressoMachiato rdf:about="http://example.org/espresso#macchiato1">
+    <hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</hasCalories>
+  </EspressoMachiato>
+  <owl:Class rdf:about="http://example.org/espresso#HighCalorieEspresso">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N7815ed246eea46cebcbf59d55169fc68">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#Espresso"/>
+          <owl:Restriction rdf:nodeID="N3f5c248d8cce406ebc3737ef1f3a8f75">
+            <owl:onProperty rdf:resource="http://example.org/espresso#hasCalories"/>
+            <owl:someValuesFrom>
+              <rdfs:Datatype rdf:nodeID="N4d49165586f84e5386752f1f486e9e3b">
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description rdf:nodeID="N7d5c72eb71954d28839b99292f9c4394">
+                    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</xsd:minInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#FoamOrClassicSpecialty">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSpecialty"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N703cd5a75ef84cd9bd913852328dcaba">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#EspressoSpecialty"/>
+          <owl:Restriction rdf:nodeID="N94acc30ad1e94559843faf2c81f3382f">
+            <owl:onProperty rdf:resource="http://example.org/espresso#hasTopping"/>
+            <owl:allValuesFrom>
+              <owl:Class rdf:nodeID="N5a3c807812d649608936b8e445e74e88">
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://example.org/espresso#FoamTopping"/>
+                  <rdf:Description rdf:about="http://example.org/espresso#ClassicWhippedCreamTopping"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#Cappucino">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#LowCalorieEspresso">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="Nc90b8790726d4b73b5d80757a0425fe4">
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#Espresso"/>
+          <owl:Restriction rdf:nodeID="Ne8ce0c473c74455d90523ade0bcba0b6">
+            <owl:onProperty rdf:resource="http://example.org/espresso#hasCalories"/>
+            <owl:someValuesFrom>
+              <rdfs:Datatype rdf:nodeID="Nc51ce335124047f18be860fd6a945a60">
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                  <rdf:Description rdf:nodeID="Nb361a1c269574fdfb77dfa0fdeebaa00">
+                    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</xsd:maxInclusive>
+                  </rdf:Description>
+                </owl:withRestrictions>
+              </rdfs:Datatype>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#hasIngredient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/espresso#isIngredientOf"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://example.org/espresso#FoamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#CinnamonTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#FoamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#VegetableWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#SweetenedWhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#NoneSweetness">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSweetness"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#MediumSweetness"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#ExtraSweetness"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#Espresso">
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoBase"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoTopping"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N665f15c440aa44e28addfb573b599c0b">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasBase"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/espresso#EspressoBase"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb053e19b34ea45ad8dacd7d99d352779">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasCalories"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#hasBase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/espresso#hasIngredient"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://example.org/espresso#isBaseOf"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://example.org/espresso#Espresso"/>
+    <rdfs:range rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://example.org/espresso#ClassicWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#VegetableWhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#SweetenedWhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoSpecialty">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#Espresso"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#WhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoSweetness">
+    <owl:equivalentClass>
+      <owl:Class rdf:nodeID="N2ba416d2bf484bbe823f6e734e6753d2">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://example.org/espresso#NoneSweetness"/>
+          <rdf:Description rdf:about="http://example.org/espresso#MediumSweetness"/>
+          <rdf:Description rdf:about="http://example.org/espresso#ExtraSweetness"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoMachiato">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSpecialty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8b8188ea597a404e85fd44c1ba85b3e7">
+        <owl:onProperty rdf:resource="http://example.org/espresso#hasSweetness"/>
+        <owl:someValuesFrom rdf:resource="http://example.org/espresso#ExtraSweetness"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#ExtraSweetness">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSweetness"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoTopping"/>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoBase">
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#SweetenedWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#isToppingOf"/>
+  <owl:Class rdf:about="http://example.org/espresso#MediumSweetness">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoSweetness"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#ExtraSweetness"/>
+  </owl:Class>
+</rdf:RDF>

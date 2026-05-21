@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#hasBase">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://example.org/espresso#hasIngredient">
+        <owl:inverseOf rdf:resource="http://example.org/espresso#isIngredientOf"/>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:Ontology rdf:about="http://example.org/espresso#EspressoOntology">
+    <rdfs:comment>Espresso ontology for Semantic Web Lab 6, exercise/step 9.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://example.org/espresso#CinnamonTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#FoamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#ClassicWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#VegetableWhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#SweetenedWhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#Cappucino">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#Cafe">
+    <rdfs:label>Café</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#Espresso">
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoBase"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoRoast">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoBase"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#hasTopping">
+    <rdfs:subPropertyOf rdf:resource="http://example.org/espresso#hasIngredient"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://example.org/espresso#FoamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#VegetableWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+    <owl:disjointWith rdf:resource="http://example.org/espresso#SweetenedWhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoBase">
+    <owl:disjointWith rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#WhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#EspressoTopping"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://example.org/espresso#isIngredientOf"/>
+  <owl:Class rdf:about="http://example.org/espresso#SweetenedWhippedCreamTopping">
+    <rdfs:subClassOf rdf:resource="http://example.org/espresso#WhippedCreamTopping"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://example.org/espresso#EspressoTopping"/>
+</rdf:RDF>
