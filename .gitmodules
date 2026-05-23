@@ -1,3 +1,6 @@
 [submodule "Big-HWs/semantic-web-hw-1"]
 	path = Big-HWs/semantic-web-hw-1
 	url = git@github.com:mariosakka/semantic-web-hw-1.git
+[submodule "Big-HWs/semantic-web-hw-2"]
+	path = Big-HWs/semantic-web-hw-2
+	url = git@github.com:mariosakka/semantic-web-hw-2.git
